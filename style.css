@@ -1,20 +1,34 @@
 /* ////////// GLOBAL PROPERTIES ////////// */
 
 :root {
-  font-size: 62.5%;
   font-family: 'Lato', sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  --text-color: #f5f5f5;
+  --bg-color: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  --primary-color: #243949;
+  --secondary-color: #add8e6;
 }
 
 *,
 *::after,
 *::before {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+::selection {
+  color: var(--primary-color);
+  background: var(--secondary-color);
 }
 
 body {
+  background-image: var(--bg-color);
+  color: var(--text-color);
   font-size: 1.6rem;
+  line-height: 1.3;
 }
 
 ul {
@@ -22,27 +36,25 @@ ul {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 .layout-container {
-  /* display: flex;
-  flex-direction: column; */
   display: grid;
-  max-width: 1200px;
+  gap: 4rem;
   margin: 0 auto;
+  max-width: 1200px;
 }
 
 /* ////////// HEADER SEACTION ////////// */
 
 .header {
-  height: 100vh;
-  background-color: lightblue;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 6rem 4rem 2rem 4rem;
 }
 
 .header__intro {
@@ -53,22 +65,56 @@ a {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
+  letter-spacing: 5px;
   text-transform: uppercase;
   word-spacing: 10px;
-  letter-spacing: 5px;
 }
 
 h1 span {
   display: block;
   font-size: 3rem;
-  font-weight: 300;
   font-style: italic;
+  font-weight: 300;
+  margin: 0.8rem 0 2rem 0;
+}
+
+.header__nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+.header__nav li {
+  transition: all 0.3s ease-out;
+}
+
+.header__nav li:hover {
+  transform: translateX(1rem);
+  color: var(--secondary-color);
+}
+
+.header__nav i {
+  margin-right: 1rem;
 }
 
 .header__contacts {
   display: flex;
   justify-content: space-around;
+}
+
+.header__contacts i {
+  font-size: 3rem;
+}
+
+.header__contacts i {
+  transition: all 0.3s ease-out;
+}
+
+.header__contacts i:hover {
+  transform: scale(1.3);
+  color: var(--secondary-color);
 }
 
 @media only screen and (min-width: 768px) {
@@ -77,6 +123,7 @@ h1 span {
   }
 
   .header {
+    /* max-height: 100vh; */
     position: sticky;
     top: 0;
   }
@@ -85,7 +132,13 @@ h1 span {
 /* ////////// MAIN SEACTION ////////// */
 
 .main {
-  background-color: lightpink;
+  padding: 0 4rem 2rem 4rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    padding: 6rem 4rem 2rem 4rem;
+  }
 }
 
 /* ////////// MEDIA QUERIES ////////// */
