@@ -73,6 +73,12 @@ a {
   margin: 0 auto;
   max-width: 1200px;
 }
+.section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
 
 .badge {
   background-color: var(--light-color);
@@ -207,13 +213,6 @@ h1 span {
 
 /* ////////// SKILLS SECTION ////////// */
 
-.skills__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-
 .skills__list {
   display: flex;
   flex-wrap: wrap;
@@ -221,6 +220,12 @@ h1 span {
   gap: 1rem;
   margin-top: 2rem;
 }
+
+/* .tasks-list {
+  list-style-type: '\f00c';
+  font-family: FontAwesome;
+  font-size: 1.6rem;
+} */
 
 @media only screen and (min-width: 768px) {
   .main {
