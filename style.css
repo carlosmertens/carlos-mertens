@@ -12,6 +12,8 @@
   --secondary-color: #489eba;
   --light-color: #b3c9d9;
   --accent-color: #800000;
+
+  --border-radius: 10px;
 }
 
 *,
@@ -32,12 +34,24 @@ body {
   color: var(--text-color);
   font-size: 1.6rem;
   line-height: 1.3;
+
+  overflow-x: hidden;
 }
 h1,
 h2 {
   letter-spacing: 5px;
   text-shadow: 3px 3px 5px var(--accent-color);
   text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  margin: 4rem 0;
+}
+
+h3 {
+  text-transform: capitalize;
+  text-align: center;
 }
 
 p {
@@ -60,7 +74,36 @@ a {
   max-width: 1200px;
 }
 
-/* ////////// HEADER SEACTION ////////// */
+.badge {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  color: var(--dark-color);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 3px 10px 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.card {
+  border-radius: var(--border-radius);
+  padding: 2rem 1rem;
+  transition: all 0.3s ease-out;
+  width: 30rem;
+}
+
+.card:hover {
+  background-color: rgba(245, 245, 245, 0.103);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 992px) {
+  .card {
+    width: 35rem;
+  }
+}
+
+/* //////////////////// HEADER //////////////////// */
 
 .header {
   display: flex;
@@ -74,7 +117,6 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  text-align: center;
 }
 
 h1 {
@@ -103,8 +145,8 @@ h1 span {
 }
 
 .header__nav li:hover {
-  transform: translateX(1rem);
   color: var(--secondary-color);
+  transform: translateX(1rem);
 }
 
 .header__nav i {
@@ -125,8 +167,8 @@ h1 span {
 }
 
 .header__contacts i:hover {
-  transform: scale(1.3);
   color: var(--secondary-color);
+  transform: scale(1.3);
 }
 
 @media only screen and (min-width: 768px) {
@@ -141,11 +183,43 @@ h1 span {
   }
 }
 
-/* ////////// MAIN SEACTION ////////// */
+/* //////////////////// MAIN //////////////////// */
 
 .main {
   /* text-align: center; */
   padding: 0 4rem 2rem 4rem;
+  /* background-color: cadetblue; */
+}
+
+/* ////////// ABOUT SECTION ////////// */
+
+.about__img {
+  border-radius: 50%;
+  float: left;
+  height: 15rem;
+  margin-right: 2rem;
+  width: 15rem;
+}
+
+.about__paragraph {
+  text-align: center;
+}
+
+/* ////////// SKILLS SECTION ////////// */
+
+.skills__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 @media only screen and (min-width: 768px) {
