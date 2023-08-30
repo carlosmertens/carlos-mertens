@@ -74,6 +74,16 @@ a {
   margin: 0 auto;
   max-width: 1200px;
 }
+
+.scroll-up {
+  font-size: 4rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0 2rem 2rem 0;
+  opacity: 0.5;
+}
+
 .section__content {
   display: flex;
   flex-direction: column;
@@ -286,6 +296,10 @@ h1 span {
 
   .layout-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .scroll-up {
+    display: none;
   }
 
   .header {
