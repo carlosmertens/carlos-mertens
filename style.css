@@ -68,6 +68,10 @@ a {
   text-decoration: none;
 }
 
+footer {
+  padding: 4rem 0;
+}
+
 .layout-container {
   display: grid;
   gap: 4rem;
