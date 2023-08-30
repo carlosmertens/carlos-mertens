@@ -102,7 +102,7 @@ a {
 
 .card {
   border-radius: var(--border-radius);
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   transition: all 0.3s ease-out;
   width: 30rem;
 }
@@ -150,6 +150,35 @@ a {
 .card__description {
   font-size: 1.5rem;
   text-align: center;
+}
+
+.card__img {
+  width: 100%;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.card__external-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card__external-links i {
+  margin-left: 2rem;
+}
+
+.isDisabled {
+  color: var(--light-color);
+  cursor: not-allowed;
+}
+
+.divider {
+  width: 30%;
+  margin: 2rem auto;
+  height: 2px;
+  background-color: var(--secondary-color);
 }
 
 /* //////////////////// HEADER //////////////////// */
