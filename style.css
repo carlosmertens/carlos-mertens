@@ -92,6 +92,14 @@ a {
   white-space: nowrap;
 }
 
+.badge__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
 .card {
   border-radius: var(--border-radius);
   padding: 2rem 1rem;
@@ -108,6 +116,40 @@ a {
   content: '\f08e';
   font-family: fontawesome;
   margin-left: 1rem;
+}
+
+.card__subtitle {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.card__date {
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.card__list {
+  line-height: 1.2;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
+  list-style-position: outside;
+}
+
+.card__list i {
+  margin-right: 1rem;
+  list-style-position: outside;
+}
+
+.card__list li {
+  list-style-position: outside;
+}
+
+.card__description {
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 /* //////////////////// HEADER //////////////////// */
@@ -202,39 +244,7 @@ h1 span {
 
 /* ////////// SKILLS SECTION ////////// */
 
-.skills__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
 /* ////////// EXPERIENCE SECTION ////////// */
-
-.experience__date {
-  font-size: 1.3rem;
-  font-style: italic;
-  margin-bottom: 2rem;
-  text-align: center;
-  text-transform: capitalize;
-}
-
-.experience__list {
-  line-height: 1.2;
-  margin-bottom: 4rem;
-  padding: 0 2rem;
-  list-style-position: outside;
-}
-
-.experience__list i {
-  margin-right: 1rem;
-  list-style-position: outside;
-}
-
-.experience__list li {
-  list-style-position: outside;
-}
 
 @media only screen and (min-width: 768px) {
   .main {
@@ -254,7 +264,7 @@ h1 span {
     top: 0;
   }
 
-  .experience__list i {
+  .card__list i {
     color: var(--primary-color);
   }
 }
