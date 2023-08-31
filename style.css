@@ -34,9 +34,10 @@ body {
   color: var(--text-color);
   font-size: 1.6rem;
   line-height: 1.3;
-
   overflow-x: hidden;
+  width: 100vw;
 }
+
 h1,
 h2 {
   letter-spacing: 5px;
@@ -115,18 +116,15 @@ footer {
 }
 
 .card {
+  background-color: rgba(245, 245, 245, 0.103);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   border-radius: var(--border-radius);
   padding: 2rem 2rem;
   transition: all 0.3s ease-out;
-  width: 30rem;
+  max-width: 30rem;
 }
 
-.card:hover {
-  background-color: rgba(245, 245, 245, 0.103);
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.card__link:hover h3::after {
+.card__link h3::after {
   content: '\f08e';
   font-family: fontawesome;
   margin-left: 1rem;
@@ -212,13 +210,13 @@ footer {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   word-spacing: 10px;
 }
 
 h1 span {
   display: block;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-style: italic;
   font-weight: 300;
   margin: 0.8rem 0 2rem 0;
@@ -228,7 +226,7 @@ h1 span {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .header__nav li {
@@ -289,6 +287,25 @@ h1 span {
 
 /* ////////// EXPERIENCE SECTION ////////// */
 
+@media only screen and (max-height: 740px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  header h1 {
+    font-size: 4rem;
+    color: #800000;
+  }
+
+  header h1 span {
+    font-size: 2rem;
+  }
+
+  .header__nav li {
+    font-size: 1.4rem;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .main {
     padding: 6rem 4rem 2rem 4rem;
@@ -311,8 +328,29 @@ h1 span {
     top: 0;
   }
 
+  .card {
+    background-color: transparent;
+    box-shadow: none;
+    width: 30rem;
+  }
+
+  .card:hover {
+    background-color: rgba(245, 245, 245, 0.103);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
   .card__list i {
     color: var(--primary-color);
+  }
+
+  .card__link h3::after {
+    content: '';
+  }
+
+  .card__link:hover h3::after {
+    content: '\f08e';
+    font-family: fontawesome;
+    margin-left: 1rem;
   }
 }
 
@@ -325,6 +363,7 @@ h1 span {
 /* ////////// MEDIA QUERIES ////////// */
 
 /* @media only screen and (min-width: 480px) {
+  
 } */
 
 /* @media only screen and (min-width: 768px) {
