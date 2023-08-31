@@ -56,6 +56,10 @@ h3 {
   text-align: center;
 }
 
+#skills-section h3 {
+  text-transform: capitalize;
+}
+
 p {
   line-height: 1.5;
 }
@@ -287,6 +291,8 @@ h1 span {
 
 /* ////////// EXPERIENCE SECTION ////////// */
 
+/* ////////// MEDIA QUERIES ////////// */
+
 @media only screen and (max-height: 740px) {
   body {
     font-size: 1.4rem;
@@ -294,7 +300,7 @@ h1 span {
 
   header h1 {
     font-size: 4rem;
-    color: #800000;
+    /* color: #800000; */
   }
 
   header h1 span {
@@ -359,8 +365,6 @@ h1 span {
     width: 35rem;
   }
 }
-
-/* ////////// MEDIA QUERIES ////////// */
 
 /* @media only screen and (min-width: 480px) {
   
