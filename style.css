@@ -52,7 +52,6 @@ h2 {
 
 h3 {
   color: var(--secondary-color);
-  text-transform: initial;
   text-align: center;
 }
 
@@ -300,7 +299,7 @@ h1 span {
 
   header h1 {
     font-size: 4rem;
-    /* color: #800000; */
+    color: #800000;
   }
 
   header h1 span {
@@ -351,6 +350,7 @@ h1 span {
 
   .card__link h3::after {
     content: '';
+    /* transition: all 3s; */
   }
 
   .card__link:hover h3::after {
